@@ -239,7 +239,7 @@ namespace Pc_man_Game_MOO_ICT_1
             }
 
 
-            if (score == 87)
+            if (score == 101)
             {
                 gameOver("You Win!");
             }
