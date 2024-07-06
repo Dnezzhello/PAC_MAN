@@ -152,18 +152,20 @@
             this.txtScore.AutoSize = true;
             this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScore.ForeColor = System.Drawing.Color.White;
-            this.txtScore.Location = new System.Drawing.Point(24, 13);
+            this.txtScore.Location = new System.Drawing.Point(16, 8);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(110, 29);
+            this.txtScore.Size = new System.Drawing.Size(94, 25);
             this.txtScore.TabIndex = 0;
             this.txtScore.Text = "Score: 0";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.pictureBox1.Location = new System.Drawing.Point(161, -7);
+            this.pictureBox1.Location = new System.Drawing.Point(107, -5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 176);
+            this.pictureBox1.Size = new System.Drawing.Size(27, 114);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "wall";
@@ -171,9 +173,10 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.pictureBox2.Location = new System.Drawing.Point(427, -7);
+            this.pictureBox2.Location = new System.Drawing.Point(285, -5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 176);
+            this.pictureBox2.Size = new System.Drawing.Size(27, 114);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "wall";
@@ -181,9 +184,10 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.pictureBox3.Location = new System.Drawing.Point(507, 372);
+            this.pictureBox3.Location = new System.Drawing.Point(338, 242);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 176);
+            this.pictureBox3.Size = new System.Drawing.Size(27, 114);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Tag = "wall";
@@ -191,9 +195,10 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.pictureBox4.Location = new System.Drawing.Point(236, 372);
+            this.pictureBox4.Location = new System.Drawing.Point(157, 242);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(41, 176);
+            this.pictureBox4.Size = new System.Drawing.Size(27, 114);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Tag = "wall";
@@ -201,9 +206,10 @@
             // redGhost
             // 
             this.redGhost.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.red_guy;
-            this.redGhost.Location = new System.Drawing.Point(208, 55);
+            this.redGhost.Location = new System.Drawing.Point(139, 36);
+            this.redGhost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.redGhost.Name = "redGhost";
-            this.redGhost.Size = new System.Drawing.Size(40, 60);
+            this.redGhost.Size = new System.Drawing.Size(27, 39);
             this.redGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.redGhost.TabIndex = 5;
             this.redGhost.TabStop = false;
@@ -212,9 +218,10 @@
             // yellowGhost
             // 
             this.yellowGhost.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.yellow_guy;
-            this.yellowGhost.Location = new System.Drawing.Point(448, 445);
+            this.yellowGhost.Location = new System.Drawing.Point(299, 289);
+            this.yellowGhost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.yellowGhost.Name = "yellowGhost";
-            this.yellowGhost.Size = new System.Drawing.Size(40, 60);
+            this.yellowGhost.Size = new System.Drawing.Size(27, 39);
             this.yellowGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.yellowGhost.TabIndex = 6;
             this.yellowGhost.TabStop = false;
@@ -223,9 +230,10 @@
             // pinkGhost
             // 
             this.pinkGhost.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.pink_guy;
-            this.pinkGhost.Location = new System.Drawing.Point(525, 235);
+            this.pinkGhost.Location = new System.Drawing.Point(350, 153);
+            this.pinkGhost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pinkGhost.Name = "pinkGhost";
-            this.pinkGhost.Size = new System.Drawing.Size(40, 60);
+            this.pinkGhost.Size = new System.Drawing.Size(27, 39);
             this.pinkGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pinkGhost.TabIndex = 7;
             this.pinkGhost.TabStop = false;
@@ -234,9 +242,10 @@
             // pacman
             // 
             this.pacman.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.right;
-            this.pacman.Location = new System.Drawing.Point(31, 46);
+            this.pacman.Location = new System.Drawing.Point(21, 30);
+            this.pacman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pacman.Name = "pacman";
-            this.pacman.Size = new System.Drawing.Size(55, 55);
+            this.pacman.Size = new System.Drawing.Size(37, 36);
             this.pacman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pacman.TabIndex = 8;
             this.pacman.TabStop = false;
@@ -244,9 +253,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox5.Location = new System.Drawing.Point(78, 378);
+            this.pictureBox5.Location = new System.Drawing.Point(52, 246);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox5.Size = new System.Drawing.Size(17, 16);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
@@ -255,9 +265,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox6.Location = new System.Drawing.Point(151, 378);
+            this.pictureBox6.Location = new System.Drawing.Point(101, 246);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox6.Size = new System.Drawing.Size(17, 16);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
@@ -266,9 +277,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox7.Location = new System.Drawing.Point(120, 378);
+            this.pictureBox7.Location = new System.Drawing.Point(80, 246);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox7.Size = new System.Drawing.Size(17, 16);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 11;
             this.pictureBox7.TabStop = false;
@@ -277,9 +289,10 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox8.Location = new System.Drawing.Point(120, 443);
+            this.pictureBox8.Location = new System.Drawing.Point(80, 288);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox8.Size = new System.Drawing.Size(17, 16);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 12;
             this.pictureBox8.TabStop = false;
@@ -288,9 +301,10 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox9.Location = new System.Drawing.Point(189, 378);
+            this.pictureBox9.Location = new System.Drawing.Point(126, 246);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox9.Size = new System.Drawing.Size(17, 16);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 13;
             this.pictureBox9.TabStop = false;
@@ -299,9 +313,10 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox10.Location = new System.Drawing.Point(329, 13);
+            this.pictureBox10.Location = new System.Drawing.Point(219, 8);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox10.Size = new System.Drawing.Size(17, 16);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 14;
             this.pictureBox10.TabStop = false;
@@ -310,9 +325,10 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox11.Location = new System.Drawing.Point(78, 443);
+            this.pictureBox11.Location = new System.Drawing.Point(52, 288);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox11.Size = new System.Drawing.Size(17, 16);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 15;
             this.pictureBox11.TabStop = false;
@@ -321,9 +337,10 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox12.Location = new System.Drawing.Point(273, 12);
+            this.pictureBox12.Location = new System.Drawing.Point(182, 8);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox12.Size = new System.Drawing.Size(17, 16);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 16;
             this.pictureBox12.TabStop = false;
@@ -332,9 +349,10 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox13.Location = new System.Drawing.Point(223, 13);
+            this.pictureBox13.Location = new System.Drawing.Point(149, 8);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox13.Size = new System.Drawing.Size(17, 16);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 17;
             this.pictureBox13.TabStop = false;
@@ -343,9 +361,10 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox14.Location = new System.Drawing.Point(189, 443);
+            this.pictureBox14.Location = new System.Drawing.Point(126, 288);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox14.Size = new System.Drawing.Size(17, 16);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 18;
             this.pictureBox14.TabStop = false;
@@ -354,9 +373,10 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox15.Location = new System.Drawing.Point(151, 443);
+            this.pictureBox15.Location = new System.Drawing.Point(101, 288);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox15.Size = new System.Drawing.Size(17, 16);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 19;
             this.pictureBox15.TabStop = false;
@@ -365,9 +385,10 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox16.Location = new System.Drawing.Point(386, 12);
+            this.pictureBox16.Location = new System.Drawing.Point(257, 8);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox16.Size = new System.Drawing.Size(17, 16);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 20;
             this.pictureBox16.TabStop = false;
@@ -376,9 +397,10 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox17.Location = new System.Drawing.Point(386, 144);
+            this.pictureBox17.Location = new System.Drawing.Point(257, 94);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox17.Size = new System.Drawing.Size(17, 16);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 24;
             this.pictureBox17.TabStop = false;
@@ -387,9 +409,10 @@
             // pictureBox18
             // 
             this.pictureBox18.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox18.Location = new System.Drawing.Point(223, 144);
+            this.pictureBox18.Location = new System.Drawing.Point(149, 94);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox18.Size = new System.Drawing.Size(17, 16);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 23;
             this.pictureBox18.TabStop = false;
@@ -398,9 +421,10 @@
             // pictureBox19
             // 
             this.pictureBox19.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox19.Location = new System.Drawing.Point(273, 144);
+            this.pictureBox19.Location = new System.Drawing.Point(182, 94);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox19.Size = new System.Drawing.Size(17, 16);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 22;
             this.pictureBox19.TabStop = false;
@@ -409,9 +433,10 @@
             // pictureBox20
             // 
             this.pictureBox20.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox20.Location = new System.Drawing.Point(329, 144);
+            this.pictureBox20.Location = new System.Drawing.Point(219, 94);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox20.Size = new System.Drawing.Size(17, 16);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 21;
             this.pictureBox20.TabStop = false;
@@ -420,9 +445,10 @@
             // pictureBox21
             // 
             this.pictureBox21.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox21.Location = new System.Drawing.Point(463, 372);
+            this.pictureBox21.Location = new System.Drawing.Point(309, 242);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox21.Size = new System.Drawing.Size(17, 16);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 28;
             this.pictureBox21.TabStop = false;
@@ -431,9 +457,10 @@
             // pictureBox22
             // 
             this.pictureBox22.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox22.Location = new System.Drawing.Point(295, 372);
+            this.pictureBox22.Location = new System.Drawing.Point(197, 242);
+            this.pictureBox22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox22.Size = new System.Drawing.Size(17, 16);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 27;
             this.pictureBox22.TabStop = false;
@@ -442,9 +469,10 @@
             // pictureBox23
             // 
             this.pictureBox23.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox23.Location = new System.Drawing.Point(356, 372);
+            this.pictureBox23.Location = new System.Drawing.Point(237, 242);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox23.Size = new System.Drawing.Size(17, 16);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox23.TabIndex = 26;
             this.pictureBox23.TabStop = false;
@@ -453,9 +481,10 @@
             // pictureBox24
             // 
             this.pictureBox24.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox24.Location = new System.Drawing.Point(406, 372);
+            this.pictureBox24.Location = new System.Drawing.Point(271, 242);
+            this.pictureBox24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox24.Size = new System.Drawing.Size(17, 16);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox24.TabIndex = 25;
             this.pictureBox24.TabStop = false;
@@ -464,9 +493,10 @@
             // pictureBox25
             // 
             this.pictureBox25.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox25.Location = new System.Drawing.Point(463, 511);
+            this.pictureBox25.Location = new System.Drawing.Point(309, 332);
+            this.pictureBox25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox25.Size = new System.Drawing.Size(17, 16);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox25.TabIndex = 32;
             this.pictureBox25.TabStop = false;
@@ -475,9 +505,10 @@
             // pictureBox26
             // 
             this.pictureBox26.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox26.Location = new System.Drawing.Point(295, 507);
+            this.pictureBox26.Location = new System.Drawing.Point(197, 330);
+            this.pictureBox26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox26.Size = new System.Drawing.Size(17, 16);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox26.TabIndex = 31;
             this.pictureBox26.TabStop = false;
@@ -486,9 +517,10 @@
             // pictureBox27
             // 
             this.pictureBox27.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox27.Location = new System.Drawing.Point(356, 511);
+            this.pictureBox27.Location = new System.Drawing.Point(237, 332);
+            this.pictureBox27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox27.Size = new System.Drawing.Size(17, 16);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 30;
             this.pictureBox27.TabStop = false;
@@ -497,9 +529,10 @@
             // pictureBox28
             // 
             this.pictureBox28.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox28.Location = new System.Drawing.Point(406, 511);
+            this.pictureBox28.Location = new System.Drawing.Point(271, 332);
+            this.pictureBox28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox28.Size = new System.Drawing.Size(17, 16);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox28.TabIndex = 29;
             this.pictureBox28.TabStop = false;
@@ -508,9 +541,10 @@
             // pictureBox29
             // 
             this.pictureBox29.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox29.Location = new System.Drawing.Point(639, 408);
+            this.pictureBox29.Location = new System.Drawing.Point(426, 265);
+            this.pictureBox29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox29.Size = new System.Drawing.Size(17, 16);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox29.TabIndex = 36;
             this.pictureBox29.TabStop = false;
@@ -519,9 +553,10 @@
             // pictureBox30
             // 
             this.pictureBox30.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox30.Location = new System.Drawing.Point(78, 502);
+            this.pictureBox30.Location = new System.Drawing.Point(52, 326);
+            this.pictureBox30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox30.Size = new System.Drawing.Size(17, 16);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox30.TabIndex = 35;
             this.pictureBox30.TabStop = false;
@@ -530,9 +565,10 @@
             // pictureBox31
             // 
             this.pictureBox31.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox31.Location = new System.Drawing.Point(560, 408);
+            this.pictureBox31.Location = new System.Drawing.Point(373, 265);
+            this.pictureBox31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox31.Size = new System.Drawing.Size(17, 16);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox31.TabIndex = 34;
             this.pictureBox31.TabStop = false;
@@ -541,9 +577,10 @@
             // pictureBox32
             // 
             this.pictureBox32.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox32.Location = new System.Drawing.Point(597, 408);
+            this.pictureBox32.Location = new System.Drawing.Point(398, 265);
+            this.pictureBox32.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox32.Size = new System.Drawing.Size(17, 16);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox32.TabIndex = 33;
             this.pictureBox32.TabStop = false;
@@ -552,9 +589,10 @@
             // pictureBox33
             // 
             this.pictureBox33.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox33.Location = new System.Drawing.Point(639, 471);
+            this.pictureBox33.Location = new System.Drawing.Point(426, 306);
+            this.pictureBox33.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox33.Size = new System.Drawing.Size(17, 16);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox33.TabIndex = 39;
             this.pictureBox33.TabStop = false;
@@ -563,9 +601,10 @@
             // pictureBox34
             // 
             this.pictureBox34.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox34.Location = new System.Drawing.Point(560, 471);
+            this.pictureBox34.Location = new System.Drawing.Point(373, 306);
+            this.pictureBox34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox34.Size = new System.Drawing.Size(17, 16);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox34.TabIndex = 38;
             this.pictureBox34.TabStop = false;
@@ -574,9 +613,10 @@
             // pictureBox35
             // 
             this.pictureBox35.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox35.Location = new System.Drawing.Point(597, 471);
+            this.pictureBox35.Location = new System.Drawing.Point(398, 306);
+            this.pictureBox35.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox35.Size = new System.Drawing.Size(17, 16);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox35.TabIndex = 37;
             this.pictureBox35.TabStop = false;
@@ -585,9 +625,10 @@
             // pictureBox36
             // 
             this.pictureBox36.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox36.Location = new System.Drawing.Point(189, 502);
+            this.pictureBox36.Location = new System.Drawing.Point(126, 326);
+            this.pictureBox36.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox36.Size = new System.Drawing.Size(17, 16);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox36.TabIndex = 42;
             this.pictureBox36.TabStop = false;
@@ -596,9 +637,10 @@
             // pictureBox37
             // 
             this.pictureBox37.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox37.Location = new System.Drawing.Point(120, 502);
+            this.pictureBox37.Location = new System.Drawing.Point(80, 326);
+            this.pictureBox37.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox37.Name = "pictureBox37";
-            this.pictureBox37.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox37.Size = new System.Drawing.Size(17, 16);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox37.TabIndex = 41;
             this.pictureBox37.TabStop = false;
@@ -607,9 +649,10 @@
             // pictureBox38
             // 
             this.pictureBox38.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox38.Location = new System.Drawing.Point(151, 502);
+            this.pictureBox38.Location = new System.Drawing.Point(101, 326);
+            this.pictureBox38.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox38.Name = "pictureBox38";
-            this.pictureBox38.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox38.Size = new System.Drawing.Size(17, 16);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox38.TabIndex = 40;
             this.pictureBox38.TabStop = false;
@@ -618,9 +661,10 @@
             // pictureBox40
             // 
             this.pictureBox40.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox40.Location = new System.Drawing.Point(356, 270);
+            this.pictureBox40.Location = new System.Drawing.Point(237, 176);
+            this.pictureBox40.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox40.Name = "pictureBox40";
-            this.pictureBox40.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox40.Size = new System.Drawing.Size(17, 16);
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox40.TabIndex = 45;
             this.pictureBox40.TabStop = false;
@@ -630,9 +674,10 @@
             // pictureBox41
             // 
             this.pictureBox41.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox41.Location = new System.Drawing.Point(397, 270);
+            this.pictureBox41.Location = new System.Drawing.Point(265, 176);
+            this.pictureBox41.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox41.Name = "pictureBox41";
-            this.pictureBox41.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox41.Size = new System.Drawing.Size(17, 16);
             this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox41.TabIndex = 44;
             this.pictureBox41.TabStop = false;
@@ -642,9 +687,10 @@
             // pictureBox43
             // 
             this.pictureBox43.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox43.Location = new System.Drawing.Point(315, 270);
+            this.pictureBox43.Location = new System.Drawing.Point(210, 176);
+            this.pictureBox43.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox43.Name = "pictureBox43";
-            this.pictureBox43.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox43.Size = new System.Drawing.Size(17, 16);
             this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox43.TabIndex = 50;
             this.pictureBox43.TabStop = false;
@@ -654,9 +700,10 @@
             // pictureBox44
             // 
             this.pictureBox44.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox44.Location = new System.Drawing.Point(193, 270);
+            this.pictureBox44.Location = new System.Drawing.Point(129, 176);
+            this.pictureBox44.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox44.Name = "pictureBox44";
-            this.pictureBox44.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox44.Size = new System.Drawing.Size(17, 16);
             this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox44.TabIndex = 49;
             this.pictureBox44.TabStop = false;
@@ -665,9 +712,10 @@
             // pictureBox45
             // 
             this.pictureBox45.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox45.Location = new System.Drawing.Point(237, 270);
+            this.pictureBox45.Location = new System.Drawing.Point(158, 176);
+            this.pictureBox45.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox45.Name = "pictureBox45";
-            this.pictureBox45.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox45.Size = new System.Drawing.Size(17, 16);
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox45.TabIndex = 48;
             this.pictureBox45.TabStop = false;
@@ -677,9 +725,10 @@
             // pictureBox46
             // 
             this.pictureBox46.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox46.Location = new System.Drawing.Point(273, 270);
+            this.pictureBox46.Location = new System.Drawing.Point(182, 176);
+            this.pictureBox46.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox46.Name = "pictureBox46";
-            this.pictureBox46.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox46.Size = new System.Drawing.Size(17, 16);
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox46.TabIndex = 47;
             this.pictureBox46.TabStop = false;
@@ -689,9 +738,10 @@
             // pictureBox47
             // 
             this.pictureBox47.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox47.Location = new System.Drawing.Point(152, 270);
+            this.pictureBox47.Location = new System.Drawing.Point(101, 176);
+            this.pictureBox47.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox47.Name = "pictureBox47";
-            this.pictureBox47.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox47.Size = new System.Drawing.Size(17, 16);
             this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox47.TabIndex = 52;
             this.pictureBox47.TabStop = false;
@@ -700,9 +750,10 @@
             // pictureBox48
             // 
             this.pictureBox48.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox48.Location = new System.Drawing.Point(110, 270);
+            this.pictureBox48.Location = new System.Drawing.Point(73, 176);
+            this.pictureBox48.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox48.Name = "pictureBox48";
-            this.pictureBox48.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox48.Size = new System.Drawing.Size(17, 16);
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox48.TabIndex = 51;
             this.pictureBox48.TabStop = false;
@@ -716,9 +767,10 @@
             // pictureBox39
             // 
             this.pictureBox39.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox39.Location = new System.Drawing.Point(78, 270);
+            this.pictureBox39.Location = new System.Drawing.Point(52, 176);
+            this.pictureBox39.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox39.Name = "pictureBox39";
-            this.pictureBox39.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox39.Size = new System.Drawing.Size(17, 16);
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox39.TabIndex = 53;
             this.pictureBox39.TabStop = false;
@@ -727,9 +779,10 @@
             // pictureBox42
             // 
             this.pictureBox42.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox42.Location = new System.Drawing.Point(567, 90);
+            this.pictureBox42.Location = new System.Drawing.Point(378, 58);
+            this.pictureBox42.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox42.Name = "pictureBox42";
-            this.pictureBox42.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox42.Size = new System.Drawing.Size(17, 16);
             this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox42.TabIndex = 59;
             this.pictureBox42.TabStop = false;
@@ -738,9 +791,10 @@
             // pictureBox49
             // 
             this.pictureBox49.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox49.Location = new System.Drawing.Point(488, 90);
+            this.pictureBox49.Location = new System.Drawing.Point(325, 58);
+            this.pictureBox49.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox49.Name = "pictureBox49";
-            this.pictureBox49.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox49.Size = new System.Drawing.Size(17, 16);
             this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox49.TabIndex = 58;
             this.pictureBox49.TabStop = false;
@@ -749,9 +803,10 @@
             // pictureBox50
             // 
             this.pictureBox50.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox50.Location = new System.Drawing.Point(525, 90);
+            this.pictureBox50.Location = new System.Drawing.Point(350, 58);
+            this.pictureBox50.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox50.Name = "pictureBox50";
-            this.pictureBox50.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox50.Size = new System.Drawing.Size(17, 16);
             this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox50.TabIndex = 57;
             this.pictureBox50.TabStop = false;
@@ -760,9 +815,10 @@
             // pictureBox51
             // 
             this.pictureBox51.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox51.Location = new System.Drawing.Point(567, 27);
+            this.pictureBox51.Location = new System.Drawing.Point(378, 18);
+            this.pictureBox51.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox51.Name = "pictureBox51";
-            this.pictureBox51.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox51.Size = new System.Drawing.Size(17, 16);
             this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox51.TabIndex = 56;
             this.pictureBox51.TabStop = false;
@@ -771,9 +827,10 @@
             // pictureBox52
             // 
             this.pictureBox52.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox52.Location = new System.Drawing.Point(488, 27);
+            this.pictureBox52.Location = new System.Drawing.Point(325, 18);
+            this.pictureBox52.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox52.Name = "pictureBox52";
-            this.pictureBox52.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox52.Size = new System.Drawing.Size(17, 16);
             this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox52.TabIndex = 55;
             this.pictureBox52.TabStop = false;
@@ -782,9 +839,10 @@
             // pictureBox53
             // 
             this.pictureBox53.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.coin;
-            this.pictureBox53.Location = new System.Drawing.Point(525, 27);
+            this.pictureBox53.Location = new System.Drawing.Point(350, 18);
+            this.pictureBox53.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox53.Name = "pictureBox53";
-            this.pictureBox53.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox53.Size = new System.Drawing.Size(17, 16);
             this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox53.TabIndex = 54;
             this.pictureBox53.TabStop = false;
@@ -792,10 +850,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(678, 544);
+            this.ClientSize = new System.Drawing.Size(450, 369);
             this.Controls.Add(this.pacman);
             this.Controls.Add(this.pinkGhost);
             this.Controls.Add(this.yellowGhost);
@@ -854,9 +912,11 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtScore);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Tag = "";
             this.Text = "Pac Man Game MOO ICT";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

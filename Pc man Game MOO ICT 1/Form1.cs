@@ -19,7 +19,10 @@ namespace Pc_man_Game_MOO_ICT_1
 
         int score, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostX, pinkGhostY;
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
 
         public Form1()
         {
@@ -245,7 +248,7 @@ namespace Pc_man_Game_MOO_ICT_1
         {
             isGameOver = true;
 
-            gameTimer.Start();
+            gameTimer.Stop();
 
             txtScore.Text = "Score: " + score + Environment.NewLine + message;
 
