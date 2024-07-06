@@ -17,9 +17,12 @@ namespace Pc_man_Game_MOO_ICT_1
 
         bool goup, godown, goleft, goright, isGameOver;
 
-        int score, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostX, pinkGhostY;
+        int score, playerSpeed, redGhostSpeed, redGhost1Speed, yellowGhostSpeed, pinkGhostX, pinkGhostY, pinkGhost1X, pinkGhost1Y,  yellowGhost1Speed, redGhost2Speed, yellowGhost2Speed;
 
+        private void pictureBox54_Click(object sender, EventArgs e)
+        {
 
+        }
 
         public Form1()
         {
@@ -148,6 +151,11 @@ namespace Pc_man_Game_MOO_ICT_1
                     {
                         pinkGhostX = -pinkGhostX;
                     }
+
+                    if (pinkGhost1.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        pinkGhost1X = -pinkGhost1X;
+                    }
                 }
 
                 if ((string)x.Tag == "ghost")
@@ -161,16 +169,45 @@ namespace Pc_man_Game_MOO_ICT_1
 
             // moving ghosts
             redGhost.Left += redGhostSpeed;
-
             if (redGhost.Bounds.IntersectsWith(pictureBox1.Bounds) || redGhost.Bounds.IntersectsWith(pictureBox2.Bounds))
             {
                 redGhostSpeed = -redGhostSpeed;
             }
+
+
+            redGhost1.Left += redGhost1Speed;
+            if (redGhost1.Bounds.IntersectsWith(pictureBox3.Bounds) || redGhost1.Bounds.IntersectsWith(pictureBox55.Bounds))
+            {
+                redGhost1Speed = -redGhost1Speed;
+            }
+
+            redGhost2.Left += redGhost2Speed;
+            if (redGhost2.Bounds.IntersectsWith(pictureBox55.Bounds) || redGhost2.Bounds.IntersectsWith(pictureBox73.Bounds))
+            {
+                redGhost2Speed = -redGhost2Speed;
+            }
+
             yellowGhost.Left -= yellowGhostSpeed;
 
             if (yellowGhost.Bounds.IntersectsWith(pictureBox4.Bounds) || yellowGhost.Bounds.IntersectsWith(pictureBox3.Bounds))
             {
                 yellowGhostSpeed = -yellowGhostSpeed;
+            }
+
+
+            yellowGhost1.Left -= yellowGhost1Speed;
+
+            if (yellowGhost1.Bounds.IntersectsWith(pictureBox54.Bounds) || yellowGhost1.Bounds.IntersectsWith(pictureBox76.Bounds))
+            {
+                yellowGhost1Speed = -yellowGhost1Speed;
+            }
+
+
+            yellowGhost2.Left -= yellowGhost2Speed;
+
+            if (yellowGhost2.Bounds.IntersectsWith(pictureBox56.Bounds) || yellowGhost2.Bounds.IntersectsWith(pictureBox78.Bounds))
+            {
+                yellowGhost2Speed = -yellowGhost2Speed;
             }
 
 
@@ -182,15 +219,27 @@ namespace Pc_man_Game_MOO_ICT_1
                 pinkGhostY = -pinkGhostY;
             }
 
-            if (pinkGhost.Left < 0 || pinkGhost.Left > 420)
+            if (pinkGhost.Left < 0 || pinkGhost.Left > 920)
             {
                 pinkGhostX = -pinkGhostX;
             }
 
+            pinkGhost1.Top -= pinkGhost1Y;
+            pinkGhost1.Left -= pinkGhost1X;
+           
+            
+            if (pinkGhost1.Top < 0 || pinkGhost1.Top > 480)
+            {
+                pinkGhost1Y = -pinkGhost1Y;
+            }
+
+            if (pinkGhost1.Left < 0 || pinkGhost1.Left > 924)
+            {
+                pinkGhost1X = -pinkGhost1X;
+            }
 
 
-
-            if (score == 46)
+            if (score == 87)
             {
                 gameOver("You Win!");
             }
@@ -204,9 +253,15 @@ namespace Pc_man_Game_MOO_ICT_1
             score = 0;
 
             redGhostSpeed = 5;
+            redGhost1Speed = 2;
+            redGhost2Speed = 5;
             yellowGhostSpeed = 5;
+            yellowGhost1Speed = 7;
+            yellowGhost2Speed = 2;
             pinkGhostX = 5;
             pinkGhostY = 5;
+            pinkGhost1X = 5;
+            pinkGhost1Y = 5;
             playerSpeed = 8;
 
             isGameOver = false;
@@ -224,6 +279,9 @@ namespace Pc_man_Game_MOO_ICT_1
 
             pinkGhost.Left = 300;
             pinkGhost.Top = 150;
+
+            pinkGhost1.Left = 143;
+            pinkGhost1.Top = 484;
 
 
             foreach (Control x in this.Controls)
