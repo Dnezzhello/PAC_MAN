@@ -9,15 +9,23 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Pc_man_Game_MOO_ICT_1
 {
     public partial class Form1 : Form
     {
+        private SoundPlayer soundEating;
+        private SoundPlayer soundBackground;
 
         bool goup, godown, goleft, goright, isGameOver;
 
         int score, highestScore, playerSpeed, redGhostSpeed, redGhost1Speed, yellowGhostSpeed, pinkGhostX, pinkGhostY, pinkGhost1X, pinkGhost1Y,  yellowGhost1Speed, redGhost2Speed, yellowGhost2Speed;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            soundBackground.Play();
+        }
 
         private void pictureBox54_Click(object sender, EventArgs e)
         {
@@ -26,6 +34,8 @@ namespace Pc_man_Game_MOO_ICT_1
 
         public Form1()
         {
+            soundEating = new SoundPlayer(Properties.Resources.pacman_chomp);
+            soundBackground = new SoundPlayer(Properties.Resources.pacman_beginning);
             InitializeComponent();
             highestScore = 0; // Initialize highest score
             resetGame();

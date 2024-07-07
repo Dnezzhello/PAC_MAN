@@ -113,5 +113,14 @@
   <ItemGroup>
     <None Include="Resources\yellow_guy.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_death.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_chomp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_beginning.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

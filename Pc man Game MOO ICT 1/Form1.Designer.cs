@@ -283,7 +283,7 @@
             this.txtScore.ForeColor = System.Drawing.Color.White;
             this.txtScore.Location = new System.Drawing.Point(0, 5);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(80, 28);
+            this.txtScore.Size = new System.Drawing.Size(79, 28);
             this.txtScore.TabIndex = 0;
             this.txtScore.Text = "ຄະແນນ: 0";
             // 
@@ -1750,7 +1750,7 @@
             this.txtHighestScore.ForeColor = System.Drawing.Color.White;
             this.txtHighestScore.Location = new System.Drawing.Point(0, 31);
             this.txtHighestScore.Name = "txtHighestScore";
-            this.txtHighestScore.Size = new System.Drawing.Size(120, 28);
+            this.txtHighestScore.Size = new System.Drawing.Size(119, 28);
             this.txtHighestScore.TabIndex = 124;
             this.txtHighestScore.Text = "ຄະແນນສູງສຸດ: 0";
             // 
@@ -1887,6 +1887,7 @@
             this.Name = "Form1";
             this.Tag = "";
             this.Text = "Pac Man Game 3CS1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
