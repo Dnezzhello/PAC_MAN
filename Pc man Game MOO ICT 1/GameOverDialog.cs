@@ -15,16 +15,19 @@ namespace Pc_man_Game_MOO_ICT_1
 
     public partial class GameOverDialog : Form
     {
-
-        SoundPlayer soundDeath = new SoundPlayer(@"D:\C#\computer-graphic\pac-man\PAC_MAN\Pc man Game MOO ICT 1\Media\pacman_death.wav");
-        SoundPlayer soundBackground = new SoundPlayer(@"D:\C#\computer-graphic\pac-man\PAC_MAN\Pc man Game MOO ICT 1\Media\pacman_beginning.wav");
+        private SoundPlayer soundBackground;
+        private SoundPlayer soundDeath;
+       
 
         public string Message { get; set; }
         public int Score { get; set; }
         public int HighScore { get; set; }  
 
         public GameOverDialog()
+
         {
+            soundBackground = new SoundPlayer(Properties.Resources.pacman_chomp);
+            soundDeath = new SoundPlayer(Properties.Resources.pacman_death);
             InitializeComponent();
 
         }

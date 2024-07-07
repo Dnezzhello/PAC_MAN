@@ -16,34 +16,48 @@ namespace Pc_man_Game_MOO_ICT_1
 {
     public partial class Form1 : Form
     {
-        
-        SoundPlayer soundEating = new SoundPlayer(@"D:\C#\computer-graphic\pac-man\PAC_MAN\Pc man Game MOO ICT 1\Media\pacman_chomp.wav");
-        SoundPlayer soundBackground = new SoundPlayer(@"D:\C#\computer-graphic\pac-man\PAC_MAN\Pc man Game MOO ICT 1\Media\pacman_beginning.wav");
+        private SoundPlayer soundEating;
+        private SoundPlayer soundBackground;
 
         bool goup, godown, goleft, goright, isGameOver;
 
-        int score, highestScore, playerSpeed, redGhostSpeed, redGhost1Speed, yellowGhostSpeed, pinkGhostX, pinkGhostY, pinkGhost1X, pinkGhost1Y,  yellowGhost1Speed, redGhost2Speed, yellowGhost2Speed;
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            soundBackground.Play();
-        }
-
-        private void pictureBox54_Click(object sender, EventArgs e)
-        {
-
-        }
+        int score, highestScore, playerSpeed, redGhostSpeed, redGhost1Speed, yellowGhostSpeed, pinkGhostX, pinkGhostY, pinkGhost1X, pinkGhost1Y, yellowGhost1Speed, redGhost2Speed, yellowGhost2Speed;
 
         public Form1()
         {
             InitializeComponent();
             highestScore = 0; // Initialize highest score
+            InitializeSounds();
             resetGame();
+        }
+
+        private void InitializeSounds()
+        {
+            try
+            {
+                soundEating = new SoundPlayer(Properties.Resources.pacman_death);
+                soundBackground = new SoundPlayer(Properties.Resources.pacman_chomp);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error initializing sounds: " + ex.Message, "Sound Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                soundBackground.PlayLooping();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error playing background sound: " + ex.Message);
+            }
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
-            
             if (e.KeyCode == Keys.Left)
             {
                 goleft = true;
@@ -64,7 +78,6 @@ namespace Pc_man_Game_MOO_ICT_1
                 godown = true;
                 pacman.Image = Properties.Resources.down;
             }
-
         }
 
         private void keyisup(object sender, KeyEventArgs e)
@@ -85,17 +98,10 @@ namespace Pc_man_Game_MOO_ICT_1
             {
                 godown = false;
             }
-            /*
-            if (e.KeyCode  == Keys.Enter && isGameOver == true )
-            {
-                resetGame();
-            }
-            */
         }
 
         private void mainGameTimer(object sender, EventArgs e)
         {
-
             txtScore.Text = "ຄະແນນ: " + score;
 
             if (score > highestScore)
@@ -104,28 +110,40 @@ namespace Pc_man_Game_MOO_ICT_1
                 txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore;
             }
 
-            if (goleft == true)
+            MovePacman();
+            MoveGhosts();
+            CheckCollisions();
+
+            if (score == 101)
+            {
+                gameOver("ທ່ານຊະນະແລ້ວ!");
+            }
+        }
+
+        private void MovePacman()
+        {
+            if (goleft)
             {
                 pacman.Left -= playerSpeed;
                 pacman.Image = Properties.Resources.left;
             }
-            if (goright == true)
+            if (goright)
             {
                 pacman.Left += playerSpeed;
                 pacman.Image = Properties.Resources.right;
-
             }
-            if (godown == true)
+            if (godown)
             {
                 pacman.Top += playerSpeed;
                 pacman.Image = Properties.Resources.down;
             }
-            if (goup == true)
+            if (goup)
             {
                 pacman.Top -= playerSpeed;
                 pacman.Image = Properties.Resources.Up;
             }
 
+            // Wrap around screen edges
             if (pacman.Left < -10)
             {
                 pacman.Left = 680;
@@ -142,7 +160,79 @@ namespace Pc_man_Game_MOO_ICT_1
             {
                 pacman.Top = 0;
             }
+        }
 
+        private void MoveGhosts()
+        {
+            // Red Ghost
+            redGhost.Left += redGhostSpeed;
+            if (redGhost.Bounds.IntersectsWith(pictureBox1.Bounds) || redGhost.Bounds.IntersectsWith(pictureBox2.Bounds))
+            {
+                redGhostSpeed = -redGhostSpeed;
+            }
+
+            // Red Ghost 1
+            redGhost1.Left += redGhost1Speed;
+            if (redGhost1.Bounds.IntersectsWith(pictureBox3.Bounds) || redGhost1.Bounds.IntersectsWith(pictureBox55.Bounds))
+            {
+                redGhost1Speed = -redGhost1Speed;
+            }
+
+            // Red Ghost 2
+            redGhost2.Left += redGhost2Speed;
+            if (redGhost2.Bounds.IntersectsWith(pictureBox55.Bounds) || redGhost2.Bounds.IntersectsWith(pictureBox73.Bounds))
+            {
+                redGhost2Speed = -redGhost2Speed;
+            }
+
+            // Yellow Ghost
+            yellowGhost.Left -= yellowGhostSpeed;
+            if (yellowGhost.Bounds.IntersectsWith(pictureBox4.Bounds) || yellowGhost.Bounds.IntersectsWith(pictureBox3.Bounds))
+            {
+                yellowGhostSpeed = -yellowGhostSpeed;
+            }
+
+            // Yellow Ghost 1
+            yellowGhost1.Left -= yellowGhost1Speed;
+            if (yellowGhost1.Bounds.IntersectsWith(pictureBox54.Bounds) || yellowGhost1.Bounds.IntersectsWith(pictureBox76.Bounds))
+            {
+                yellowGhost1Speed = -yellowGhost1Speed;
+            }
+
+            // Yellow Ghost 2
+            yellowGhost2.Left -= yellowGhost2Speed;
+            if (yellowGhost2.Bounds.IntersectsWith(pictureBox56.Bounds) || yellowGhost2.Bounds.IntersectsWith(pictureBox78.Bounds))
+            {
+                yellowGhost2Speed = -yellowGhost2Speed;
+            }
+
+            // Pink Ghost
+            pinkGhost.Left -= pinkGhostX;
+            pinkGhost.Top -= pinkGhostY;
+            if (pinkGhost.Top < 0 || pinkGhost.Top > 320)
+            {
+                pinkGhostY = -pinkGhostY;
+            }
+            if (pinkGhost.Left < 0 || pinkGhost.Left > 920)
+            {
+                pinkGhostX = -pinkGhostX;
+            }
+
+            // Pink Ghost 1
+            pinkGhost1.Top -= pinkGhost1Y;
+            pinkGhost1.Left -= pinkGhost1X;
+            if (pinkGhost1.Top < 0 || pinkGhost1.Top > 480)
+            {
+                pinkGhost1Y = -pinkGhost1Y;
+            }
+            if (pinkGhost1.Left < 0 || pinkGhost1.Left > 924)
+            {
+                pinkGhost1X = -pinkGhost1X;
+            }
+        }
+
+        private void CheckCollisions()
+        {
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox)
@@ -151,122 +241,54 @@ namespace Pc_man_Game_MOO_ICT_1
                     {
                         if (pacman.Bounds.IntersectsWith(x.Bounds))
                         {
-                            soundEating.Play();
+                            PlayEatingSound();
                             score += 1;
                             x.Visible = false;
-                            
                         }
                     }
 
-                }
-                if ((string)x.Tag == "wall")
-                {
-
-                    if (pacman.Bounds.IntersectsWith(x.Bounds))
+                    if ((string)x.Tag == "wall")
                     {
-                        gameOver("ທ່ານແພ້ແລ້ວ!");
-                   
+                        if (pacman.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            gameOver("ທ່ານແພ້ແລ້ວ!");
+                        }
+
+                        if (pinkGhost.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            pinkGhostX = -pinkGhostX;
+                        }
+
+                        if (pinkGhost1.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            pinkGhost1X = -pinkGhost1X;
+                        }
                     }
 
-                    if (pinkGhost.Bounds.IntersectsWith (x.Bounds ))
+                    if ((string)x.Tag == "ghost")
                     {
-                        pinkGhostX = -pinkGhostX;
-                    }
-
-                    if (pinkGhost1.Bounds.IntersectsWith(x.Bounds))
-                    {
-                        pinkGhost1X = -pinkGhost1X;
-                    }
-                }
-
-                if ((string)x.Tag == "ghost")
-                {
-                    if (pacman.Bounds.IntersectsWith(x.Bounds))
-                    {
-                        gameOver("ທ່ານແພ້ແລ້ວ!");
-                       
+                        if (pacman.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            gameOver("ທ່ານແພ້ແລ້ວ!");
+                        }
                     }
                 }
             }
+        }
 
-            // moving ghosts
-            redGhost.Left += redGhostSpeed;
-            if (redGhost.Bounds.IntersectsWith(pictureBox1.Bounds) || redGhost.Bounds.IntersectsWith(pictureBox2.Bounds))
+        private void PlayEatingSound()
+        {
+            try
             {
-                redGhostSpeed = -redGhostSpeed;
+                soundEating.Stop(); // Stop any currently playing sound
+                soundEating.Play();
             }
-
-
-            redGhost1.Left += redGhost1Speed;
-            if (redGhost1.Bounds.IntersectsWith(pictureBox3.Bounds) || redGhost1.Bounds.IntersectsWith(pictureBox55.Bounds))
+            catch (Exception ex)
             {
-                redGhost1Speed = -redGhost1Speed;
+                Debug.WriteLine("Error playing eating sound: " + ex.Message);
+                // Fallback to a system sound if there's an error
+                System.Media.SystemSounds.Asterisk.Play();
             }
-
-            redGhost2.Left += redGhost2Speed;
-            if (redGhost2.Bounds.IntersectsWith(pictureBox55.Bounds) || redGhost2.Bounds.IntersectsWith(pictureBox73.Bounds))
-            {
-                redGhost2Speed = -redGhost2Speed;
-            }
-
-            yellowGhost.Left -= yellowGhostSpeed;
-
-            if (yellowGhost.Bounds.IntersectsWith(pictureBox4.Bounds) || yellowGhost.Bounds.IntersectsWith(pictureBox3.Bounds))
-            {
-                yellowGhostSpeed = -yellowGhostSpeed;
-            }
-
-
-            yellowGhost1.Left -= yellowGhost1Speed;
-
-            if (yellowGhost1.Bounds.IntersectsWith(pictureBox54.Bounds) || yellowGhost1.Bounds.IntersectsWith(pictureBox76.Bounds))
-            {
-                yellowGhost1Speed = -yellowGhost1Speed;
-            }
-
-
-            yellowGhost2.Left -= yellowGhost2Speed;
-
-            if (yellowGhost2.Bounds.IntersectsWith(pictureBox56.Bounds) || yellowGhost2.Bounds.IntersectsWith(pictureBox78.Bounds))
-            {
-                yellowGhost2Speed = -yellowGhost2Speed;
-            }
-
-
-            pinkGhost.Left -= pinkGhostX;
-            pinkGhost.Top -= pinkGhostY;
-
-            if (pinkGhost.Top < 0 || pinkGhost.Top > 320)
-            {
-                pinkGhostY = -pinkGhostY;
-            }
-
-            if (pinkGhost.Left < 0 || pinkGhost.Left > 920)
-            {
-                pinkGhostX = -pinkGhostX;
-            }
-
-            pinkGhost1.Top -= pinkGhost1Y;
-            pinkGhost1.Left -= pinkGhost1X;
-           
-            
-            if (pinkGhost1.Top < 0 || pinkGhost1.Top > 480)
-            {
-                pinkGhost1Y = -pinkGhost1Y;
-            }
-
-            if (pinkGhost1.Left < 0 || pinkGhost1.Left > 924)
-            {
-                pinkGhost1X = -pinkGhost1X;
-            }
-
-
-            if (score == 101)
-            {
-                gameOver("ທ່ານຊະນະແລ້ວ!");
-            }
-            
-            
         }
 
         private void resetGame()
@@ -281,7 +303,7 @@ namespace Pc_man_Game_MOO_ICT_1
             goup = false;
             godown = false;
 
-            // Reset Pac-Man image to default (you may need to adjust this based on your resources)
+            // Reset Pac-Man image to default
             pacman.Image = Properties.Resources.right;
 
             redGhostSpeed = 5;
@@ -298,41 +320,34 @@ namespace Pc_man_Game_MOO_ICT_1
 
             isGameOver = false;
 
+            // Reset positions
             pacman.Left = 31;
             pacman.Top = 91;
-
-
             redGhost.Left = 150;
             redGhost.Top = 40;
-
             yellowGhost.Left = 290;
             yellowGhost.Top = 280;
-
-
             pinkGhost.Left = 300;
             pinkGhost.Top = 150;
-
             pinkGhost1.Left = 143;
             pinkGhost1.Top = 484;
 
-
+            // Make all PictureBox controls visible
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox)
                 {
-                   x.Visible = true;
+                    x.Visible = true;
                 }
             }
 
             gameTimer.Start();
         }
 
-
-        private void gameOver(String message)
+        private void gameOver(string message)
         {
             isGameOver = true;
             gameTimer.Stop();
-           
 
             if (score > highestScore)
             {
@@ -351,14 +366,12 @@ namespace Pc_man_Game_MOO_ICT_1
                 if (gameOverDialog.ShowDialog() == DialogResult.OK)
                 {
                     resetGame();
-                    
                 }
                 else
                 {
                     this.Close(); // Close the main form if user doesn't want to restart
                 }
             }
-
         }
     }
 }
