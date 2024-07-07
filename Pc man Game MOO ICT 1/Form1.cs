@@ -17,9 +17,9 @@ namespace Pc_man_Game_MOO_ICT_1
 
         bool goup, godown, goleft, goright, isGameOver;
 
-        int score, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostX, pinkGhostY;
+        int score, highestScore, playerSpeed, redGhostSpeed, redGhost1Speed, yellowGhostSpeed, pinkGhostX, pinkGhostY, pinkGhost1X, pinkGhost1Y,  yellowGhost1Speed, redGhost2Speed, yellowGhost2Speed;
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void pictureBox54_Click(object sender, EventArgs e)
         {
 
         }
@@ -27,6 +27,7 @@ namespace Pc_man_Game_MOO_ICT_1
         public Form1()
         {
             InitializeComponent();
+            highestScore = 0; // Initialize highest score
             resetGame();
         }
 
@@ -84,7 +85,13 @@ namespace Pc_man_Game_MOO_ICT_1
         private void mainGameTimer(object sender, EventArgs e)
         {
 
-            txtScore.Text = "Score: " + score;
+            txtScore.Text = "ຄະແນນ: " + score;
+
+            if (score > highestScore)
+            {
+                highestScore = score;
+                txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore;
+            }
 
             if (goleft == true)
             {
@@ -144,12 +151,17 @@ namespace Pc_man_Game_MOO_ICT_1
 
                     if (pacman.Bounds.IntersectsWith(x.Bounds))
                     {
-                        gameOver("You Lose!");
+                        gameOver("ທ່ານແພ້ແລ້ວ!");
                     }
 
                     if (pinkGhost.Bounds.IntersectsWith (x.Bounds ))
                     {
                         pinkGhostX = -pinkGhostX;
+                    }
+
+                    if (pinkGhost1.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        pinkGhost1X = -pinkGhost1X;
                     }
                 }
 
@@ -157,23 +169,52 @@ namespace Pc_man_Game_MOO_ICT_1
                 {
                     if (pacman.Bounds.IntersectsWith(x.Bounds))
                     {
-                        gameOver("You Lose!");
+                        gameOver("ທ່ານແພ້ແລ້ວ!");
                     }
                 }
             }
 
             // moving ghosts
             redGhost.Left += redGhostSpeed;
-
             if (redGhost.Bounds.IntersectsWith(pictureBox1.Bounds) || redGhost.Bounds.IntersectsWith(pictureBox2.Bounds))
             {
                 redGhostSpeed = -redGhostSpeed;
             }
+
+
+            redGhost1.Left += redGhost1Speed;
+            if (redGhost1.Bounds.IntersectsWith(pictureBox3.Bounds) || redGhost1.Bounds.IntersectsWith(pictureBox55.Bounds))
+            {
+                redGhost1Speed = -redGhost1Speed;
+            }
+
+            redGhost2.Left += redGhost2Speed;
+            if (redGhost2.Bounds.IntersectsWith(pictureBox55.Bounds) || redGhost2.Bounds.IntersectsWith(pictureBox73.Bounds))
+            {
+                redGhost2Speed = -redGhost2Speed;
+            }
+
             yellowGhost.Left -= yellowGhostSpeed;
 
             if (yellowGhost.Bounds.IntersectsWith(pictureBox4.Bounds) || yellowGhost.Bounds.IntersectsWith(pictureBox3.Bounds))
             {
                 yellowGhostSpeed = -yellowGhostSpeed;
+            }
+
+
+            yellowGhost1.Left -= yellowGhost1Speed;
+
+            if (yellowGhost1.Bounds.IntersectsWith(pictureBox54.Bounds) || yellowGhost1.Bounds.IntersectsWith(pictureBox76.Bounds))
+            {
+                yellowGhost1Speed = -yellowGhost1Speed;
+            }
+
+
+            yellowGhost2.Left -= yellowGhost2Speed;
+
+            if (yellowGhost2.Bounds.IntersectsWith(pictureBox56.Bounds) || yellowGhost2.Bounds.IntersectsWith(pictureBox78.Bounds))
+            {
+                yellowGhost2Speed = -yellowGhost2Speed;
             }
 
 
@@ -185,17 +226,29 @@ namespace Pc_man_Game_MOO_ICT_1
                 pinkGhostY = -pinkGhostY;
             }
 
-            if (pinkGhost.Left < 0 || pinkGhost.Left > 420)
+            if (pinkGhost.Left < 0 || pinkGhost.Left > 920)
             {
                 pinkGhostX = -pinkGhostX;
             }
 
-
-
-
-            if (score == 46)
+            pinkGhost1.Top -= pinkGhost1Y;
+            pinkGhost1.Left -= pinkGhost1X;
+           
+            
+            if (pinkGhost1.Top < 0 || pinkGhost1.Top > 480)
             {
-                gameOver("You Win!");
+                pinkGhost1Y = -pinkGhost1Y;
+            }
+
+            if (pinkGhost1.Left < 0 || pinkGhost1.Left > 924)
+            {
+                pinkGhost1X = -pinkGhost1X;
+            }
+
+
+            if (score == 101)
+            {
+                gameOver("ທ່ານຊະນະແລ້ວ!");
             }
             
             
@@ -203,19 +256,26 @@ namespace Pc_man_Game_MOO_ICT_1
 
         private void resetGame()
         {
-            txtScore.Text = "Score: 0";
+            txtScore.Text = "ຄະແນນ: 0";
+            txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore;
             score = 0;
 
             redGhostSpeed = 5;
+            redGhost1Speed = 2;
+            redGhost2Speed = 5;
             yellowGhostSpeed = 5;
+            yellowGhost1Speed = 7;
+            yellowGhost2Speed = 2;
             pinkGhostX = 5;
             pinkGhostY = 5;
+            pinkGhost1X = 5;
+            pinkGhost1Y = 5;
             playerSpeed = 8;
 
             isGameOver = false;
 
             pacman.Left = 31;
-            pacman.Top = 46;
+            pacman.Top = 91;
 
 
             redGhost.Left = 150;
@@ -228,6 +288,9 @@ namespace Pc_man_Game_MOO_ICT_1
             pinkGhost.Left = 300;
             pinkGhost.Top = 150;
 
+            pinkGhost1.Left = 143;
+            pinkGhost1.Top = 484;
+
 
             foreach (Control x in this.Controls)
             {
@@ -238,20 +301,21 @@ namespace Pc_man_Game_MOO_ICT_1
             }
 
             gameTimer.Start();
-
-
-
         }
 
 
         private void gameOver(String message)
         {
             isGameOver = true;
-
             gameTimer.Stop();
 
-            txtScore.Text = "Score: " + score + Environment.NewLine + message;
+            if (score > highestScore)
+            {
+                highestScore = score;
+            }
 
+            txtScore.Text = "ຄະແນນ: " + score;
+            txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore + Environment.NewLine + message;
 
         }
     }
