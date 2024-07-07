@@ -123,6 +123,7 @@
     <None Include="Resources\yellow_guy.gif" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <None Include="Resources\pacman_death.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +131,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pacman_beginning.wav" />
+=======
+    <None Include="Resources\welcome_page.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_static.jpg" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
