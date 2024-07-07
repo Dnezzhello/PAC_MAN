@@ -16,16 +16,5 @@ namespace Pc_man_Game_MOO_ICT_1
         {
             InitializeComponent();
         }
-
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 mainForm = new Form1();
-
-            mainForm.ShowDialog();
-
-            this.Close();
-
-        }
     }
 }
