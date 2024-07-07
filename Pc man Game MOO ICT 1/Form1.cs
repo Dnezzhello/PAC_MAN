@@ -75,11 +75,12 @@ namespace Pc_man_Game_MOO_ICT_1
             {
                 godown = false;
             }
-
+            /*
             if (e.KeyCode  == Keys.Enter && isGameOver == true )
             {
                 resetGame();
             }
+            */
         }
 
         private void mainGameTimer(object sender, EventArgs e)
@@ -260,6 +261,15 @@ namespace Pc_man_Game_MOO_ICT_1
             txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore;
             score = 0;
 
+            // Reset movement flags
+            goleft = false;
+            goright = false;
+            goup = false;
+            godown = false;
+
+            // Reset Pac-Man image to default (you may need to adjust this based on your resources)
+            pacman.Image = Properties.Resources.right;
+
             redGhostSpeed = 5;
             redGhost1Speed = 2;
             redGhost2Speed = 5;
@@ -316,6 +326,22 @@ namespace Pc_man_Game_MOO_ICT_1
 
             txtScore.Text = "ຄະແນນ: " + score;
             txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore + Environment.NewLine + message;
+
+            using (var gameOverDialog = new GameOverDialog())
+            {
+                gameOverDialog.Message = message;
+                gameOverDialog.Score = score;
+                gameOverDialog.HighScore = highestScore;
+
+                if (gameOverDialog.ShowDialog() == DialogResult.OK)
+                {
+                    resetGame();
+                }
+                else
+                {
+                    this.Close(); // Close the main form if user doesn't want to restart
+                }
+            }
 
         }
     }
