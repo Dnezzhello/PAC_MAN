@@ -17,7 +17,7 @@ namespace Pc_man_Game_MOO_ICT_1
 
         bool goup, godown, goleft, goright, isGameOver;
 
-        int score, playerSpeed, redGhostSpeed, redGhost1Speed, yellowGhostSpeed, pinkGhostX, pinkGhostY, pinkGhost1X, pinkGhost1Y,  yellowGhost1Speed, redGhost2Speed, yellowGhost2Speed;
+        int score, highestScore, playerSpeed, redGhostSpeed, redGhost1Speed, yellowGhostSpeed, pinkGhostX, pinkGhostY, pinkGhost1X, pinkGhost1Y,  yellowGhost1Speed, redGhost2Speed, yellowGhost2Speed;
 
         private void pictureBox54_Click(object sender, EventArgs e)
         {
@@ -27,6 +27,7 @@ namespace Pc_man_Game_MOO_ICT_1
         public Form1()
         {
             InitializeComponent();
+            highestScore = 0; // Initialize highest score
             resetGame();
         }
 
@@ -84,7 +85,13 @@ namespace Pc_man_Game_MOO_ICT_1
         private void mainGameTimer(object sender, EventArgs e)
         {
 
-            txtScore.Text = "Score: " + score;
+            txtScore.Text = "ຄະແນນ: " + score;
+
+            if (score > highestScore)
+            {
+                highestScore = score;
+                txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore;
+            }
 
             if (goleft == true)
             {
@@ -144,7 +151,7 @@ namespace Pc_man_Game_MOO_ICT_1
 
                     if (pacman.Bounds.IntersectsWith(x.Bounds))
                     {
-                        gameOver("You Lose!");
+                        gameOver("ທ່ານແພ້ແລ້ວ!");
                     }
 
                     if (pinkGhost.Bounds.IntersectsWith (x.Bounds ))
@@ -162,7 +169,7 @@ namespace Pc_man_Game_MOO_ICT_1
                 {
                     if (pacman.Bounds.IntersectsWith(x.Bounds))
                     {
-                        gameOver("You Lose!");
+                        gameOver("ທ່ານແພ້ແລ້ວ!");
                     }
                 }
             }
@@ -241,7 +248,7 @@ namespace Pc_man_Game_MOO_ICT_1
 
             if (score == 101)
             {
-                gameOver("You Win!");
+                gameOver("ທ່ານຊະນະແລ້ວ!");
             }
             
             
@@ -249,7 +256,8 @@ namespace Pc_man_Game_MOO_ICT_1
 
         private void resetGame()
         {
-            txtScore.Text = "Score: 0";
+            txtScore.Text = "ຄະແນນ: 0";
+            txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore;
             score = 0;
 
             redGhostSpeed = 5;
@@ -267,7 +275,7 @@ namespace Pc_man_Game_MOO_ICT_1
             isGameOver = false;
 
             pacman.Left = 31;
-            pacman.Top = 46;
+            pacman.Top = 91;
 
 
             redGhost.Left = 150;
@@ -293,20 +301,21 @@ namespace Pc_man_Game_MOO_ICT_1
             }
 
             gameTimer.Start();
-
-
-
         }
 
 
         private void gameOver(String message)
         {
             isGameOver = true;
+            gameTimer.Stop();
 
-            gameTimer.Start();
+            if (score > highestScore)
+            {
+                highestScore = score;
+            }
 
-            txtScore.Text = "Score: " + score + Environment.NewLine + message;
-
+            txtScore.Text = "ຄະແນນ: " + score;
+            txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore + Environment.NewLine + message;
 
         }
     }

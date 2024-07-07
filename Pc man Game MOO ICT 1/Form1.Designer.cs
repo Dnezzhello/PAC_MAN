@@ -152,6 +152,7 @@
             this.pictureBox110 = new System.Windows.Forms.PictureBox();
             this.pictureBox111 = new System.Windows.Forms.PictureBox();
             this.pictureBox112 = new System.Windows.Forms.PictureBox();
+            this.txtHighestScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -278,13 +279,13 @@
             // txtScore
             // 
             this.txtScore.AutoSize = true;
-            this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScore.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScore.ForeColor = System.Drawing.Color.White;
-            this.txtScore.Location = new System.Drawing.Point(21, 10);
+            this.txtScore.Location = new System.Drawing.Point(0, 5);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(94, 25);
+            this.txtScore.Size = new System.Drawing.Size(80, 28);
             this.txtScore.TabIndex = 0;
-            this.txtScore.Text = "Score: 0";
+            this.txtScore.Text = "ຄະແນນ: 0";
             // 
             // pictureBox1
             // 
@@ -369,7 +370,7 @@
             // pacman
             // 
             this.pacman.Image = global::Pc_man_Game_MOO_ICT_1.Properties.Resources.right;
-            this.pacman.Location = new System.Drawing.Point(28, 37);
+            this.pacman.Location = new System.Drawing.Point(39, 91);
             this.pacman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pacman.Name = "pacman";
             this.pacman.Size = new System.Drawing.Size(49, 44);
@@ -1742,12 +1743,24 @@
             this.pictureBox112.TabStop = false;
             this.pictureBox112.Tag = "coin";
             // 
+            // txtHighestScore
+            // 
+            this.txtHighestScore.AutoSize = true;
+            this.txtHighestScore.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHighestScore.ForeColor = System.Drawing.Color.White;
+            this.txtHighestScore.Location = new System.Drawing.Point(0, 31);
+            this.txtHighestScore.Name = "txtHighestScore";
+            this.txtHighestScore.Size = new System.Drawing.Size(120, 28);
+            this.txtHighestScore.TabIndex = 124;
+            this.txtHighestScore.Text = "ຄະແນນສູງສຸດ: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(957, 630);
+            this.Controls.Add(this.txtHighestScore);
             this.Controls.Add(this.pictureBox111);
             this.Controls.Add(this.pictureBox112);
             this.Controls.Add(this.pictureBox107);
@@ -1873,7 +1886,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Tag = "";
-            this.Text = "Pac Man Game MOO ICT";
+            this.Text = "Pac Man Game 3CS1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -2127,6 +2140,7 @@
         private System.Windows.Forms.PictureBox pictureBox110;
         private System.Windows.Forms.PictureBox pictureBox111;
         private System.Windows.Forms.PictureBox pictureBox112;
+        private System.Windows.Forms.Label txtHighestScore;
     }
 }
 
