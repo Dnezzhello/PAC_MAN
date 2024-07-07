@@ -133,6 +133,26 @@ namespace Pc_man_Game_MOO_ICT_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap welcome_page {
+            get {
+                object obj = ResourceManager.GetObject("welcome_page", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap welcome_static {
+            get {
+                object obj = ResourceManager.GetObject("welcome_static", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap yellow_guy {
             get {
                 object obj = ResourceManager.GetObject("yellow_guy", resourceCulture);
