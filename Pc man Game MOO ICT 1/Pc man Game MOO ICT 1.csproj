@@ -113,5 +113,8 @@
   <ItemGroup>
     <None Include="Resources\yellow_guy.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Media\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

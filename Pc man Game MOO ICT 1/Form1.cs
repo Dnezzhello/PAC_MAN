@@ -9,15 +9,25 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.Diagnostics;
 
 namespace Pc_man_Game_MOO_ICT_1
 {
     public partial class Form1 : Form
     {
+        
+        SoundPlayer soundEating = new SoundPlayer(@"D:\C#\computer-graphic\pac-man\PAC_MAN\Pc man Game MOO ICT 1\Media\pacman_chomp.wav");
+        SoundPlayer soundBackground = new SoundPlayer(@"D:\C#\computer-graphic\pac-man\PAC_MAN\Pc man Game MOO ICT 1\Media\pacman_beginning.wav");
 
         bool goup, godown, goleft, goright, isGameOver;
 
         int score, highestScore, playerSpeed, redGhostSpeed, redGhost1Speed, yellowGhostSpeed, pinkGhostX, pinkGhostY, pinkGhost1X, pinkGhost1Y,  yellowGhost1Speed, redGhost2Speed, yellowGhost2Speed;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            soundBackground.Play();
+        }
 
         private void pictureBox54_Click(object sender, EventArgs e)
         {
@@ -141,8 +151,10 @@ namespace Pc_man_Game_MOO_ICT_1
                     {
                         if (pacman.Bounds.IntersectsWith(x.Bounds))
                         {
+                            soundEating.Play();
                             score += 1;
                             x.Visible = false;
+                            
                         }
                     }
 
@@ -153,6 +165,7 @@ namespace Pc_man_Game_MOO_ICT_1
                     if (pacman.Bounds.IntersectsWith(x.Bounds))
                     {
                         gameOver("ທ່ານແພ້ແລ້ວ!");
+                   
                     }
 
                     if (pinkGhost.Bounds.IntersectsWith (x.Bounds ))
@@ -171,6 +184,7 @@ namespace Pc_man_Game_MOO_ICT_1
                     if (pacman.Bounds.IntersectsWith(x.Bounds))
                     {
                         gameOver("ທ່ານແພ້ແລ້ວ!");
+                       
                     }
                 }
             }
@@ -318,6 +332,7 @@ namespace Pc_man_Game_MOO_ICT_1
         {
             isGameOver = true;
             gameTimer.Stop();
+           
 
             if (score > highestScore)
             {
@@ -336,6 +351,7 @@ namespace Pc_man_Game_MOO_ICT_1
                 if (gameOverDialog.ShowDialog() == DialogResult.OK)
                 {
                     resetGame();
+                    
                 }
                 else
                 {
