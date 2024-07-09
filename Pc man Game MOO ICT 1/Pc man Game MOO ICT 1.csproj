@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameManual.Designer.cs">
+      <DependentUpon>GameManual.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameOverDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameManual.resx">
+      <DependentUpon>GameManual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameOverDialog.resx">
       <DependentUpon>GameOverDialog.cs</DependentUpon>
@@ -139,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\click bottom_.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-manual.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

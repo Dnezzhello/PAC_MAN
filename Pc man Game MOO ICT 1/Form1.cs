@@ -46,8 +46,6 @@ namespace Pc_man_Game_MOO_ICT_1
 
         }
 
-   
-
         public Form1()
         {
             soundEating = new SoundPlayer(Properties.Resources.pacman_chomp);
@@ -58,12 +56,10 @@ namespace Pc_man_Game_MOO_ICT_1
             resetGame();
         }
 
-
         private void StartBackgroundMusic()
         {
             soundBackground.PlayLooping();
         }
-
 
         public void StopBackgroundMusic()
         {
@@ -93,7 +89,6 @@ namespace Pc_man_Game_MOO_ICT_1
                 godown = true;
                 pacman.Image = Properties.Resources.down;
             }
-
         }
 
         private void keyisup(object sender, KeyEventArgs e)
@@ -290,8 +285,6 @@ namespace Pc_man_Game_MOO_ICT_1
             {
                 gameOver("ທ່ານຊະນະແລ້ວ!");
             }
-            
-            
         }
 
         private void resetGame()
@@ -299,8 +292,6 @@ namespace Pc_man_Game_MOO_ICT_1
             txtScore.Text = "ຄະແນນ: 0";
             txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore;
             score = 0;
-
-
 
 
             // Reset movement flags
@@ -366,8 +357,6 @@ namespace Pc_man_Game_MOO_ICT_1
 
             gameTimer.Start();
         }
-
-
         private void gameOver(String message)
         {
             isGameOver = true;

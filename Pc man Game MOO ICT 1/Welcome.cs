@@ -38,6 +38,10 @@ namespace Pc_man_Game_MOO_ICT_1
         private void btnGameDetail_Click(object sender, EventArgs e)
         {
             soundClick.Play();
+            GameManual gameManual = new GameManual();
+            this.Hide();
+            gameManual.ShowDialog();
+            this.Close();
         }
     }
 }
