@@ -19,13 +19,13 @@ namespace Pc_man_Game_MOO_ICT_1
         private SoundPlayer soundDeath;
         private SoundPlayer soundBeginning;
        
-        private Form1 mainForm;
+        private Main mainForm;
 
         public string Message { get; set; }
         public int Score { get; set; }
         public int HighScore { get; set; }  
 
-        public GameOverDialog(Form1 mainForm)
+        public GameOverDialog(Main mainForm)
         {
             InitializeComponent();
             soundDeath = new SoundPlayer(Properties.Resources.pacman_death);

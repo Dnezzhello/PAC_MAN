@@ -24,7 +24,7 @@ namespace Pc_man_Game_MOO_ICT_1
         {
 
             soundClick.PlaySync();
-            Form1 mainForm = new Form1();
+            Main mainForm = new Main();
 
             this.Hide();
 

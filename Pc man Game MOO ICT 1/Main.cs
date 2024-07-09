@@ -14,7 +14,7 @@ using System.Drawing.Printing;
 
 namespace Pc_man_Game_MOO_ICT_1
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         private SoundPlayer soundEating;
         private SoundPlayer soundBeginning;
@@ -46,7 +46,7 @@ namespace Pc_man_Game_MOO_ICT_1
 
         }
 
-        public Form1()
+        public Main()
         {
             soundEating = new SoundPlayer(Properties.Resources.pacman_chomp);
             soundBeginning = new SoundPlayer(Properties.Resources.pacman_beginning);

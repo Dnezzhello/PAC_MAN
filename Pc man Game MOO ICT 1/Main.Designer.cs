@@ -1,6 +1,6 @@
 ﻿namespace Pc_man_Game_MOO_ICT_1
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
