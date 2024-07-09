@@ -61,6 +61,15 @@ namespace Pc_man_Game_MOO_ICT_1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream click_bottom_ {
+            get {
+                return ResourceManager.GetStream("click_bottom_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap coin {
@@ -87,6 +96,15 @@ namespace Pc_man_Game_MOO_ICT_1.Properties {
             get {
                 object obj = ResourceManager.GetObject("left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream pac_man_background {
+            get {
+                return ResourceManager.GetStream("pac_man_background", resourceCulture);
             }
         }
         

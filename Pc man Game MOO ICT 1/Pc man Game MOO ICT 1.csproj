@@ -134,5 +134,11 @@
   <ItemGroup>
     <None Include="Resources\welcome.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pac-man-background.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click bottom_.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -66,6 +66,7 @@
             this.btnGameDetail.TabIndex = 2;
             this.btnGameDetail.Text = "ຄູ່ມື";
             this.btnGameDetail.UseVisualStyleBackColor = false;
+            this.btnGameDetail.Click += new System.EventHandler(this.btnGameDetail_Click);
             // 
             // Welcome
             // 

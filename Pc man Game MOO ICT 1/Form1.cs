@@ -10,12 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Drawing.Printing;
 
 namespace Pc_man_Game_MOO_ICT_1
 {
     public partial class Form1 : Form
     {
         private SoundPlayer soundEating;
+        private SoundPlayer soundBeginning;
         private SoundPlayer soundBackground;
 
         bool goup, godown, goleft, goright, isGameOver;
@@ -24,7 +26,19 @@ namespace Pc_man_Game_MOO_ICT_1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            soundBackground.Play();
+            soundBeginning.Play();
+
+            // Wait for the beginning sound to finish before starting the background music
+            int beginningDuration = 5000; // Adjust this value based on the actual duration of your beginning sound in milliseconds
+            Timer backgroundMusicTimer = new Timer();
+            backgroundMusicTimer.Interval = beginningDuration;
+            backgroundMusicTimer.Tick += (s, args) =>
+            {
+                StartBackgroundMusic();
+                backgroundMusicTimer.Stop();
+                backgroundMusicTimer.Dispose();
+            };
+            backgroundMusicTimer.Start();
         }
 
         private void pictureBox54_Click(object sender, EventArgs e)
@@ -32,13 +46,28 @@ namespace Pc_man_Game_MOO_ICT_1
 
         }
 
+   
+
         public Form1()
         {
             soundEating = new SoundPlayer(Properties.Resources.pacman_chomp);
-            soundBackground = new SoundPlayer(Properties.Resources.pacman_beginning);
+            soundBeginning = new SoundPlayer(Properties.Resources.pacman_beginning);
+            soundBackground = new SoundPlayer(Properties.Resources.pac_man_background);
             InitializeComponent();
             highestScore = 0; // Initialize highest score
             resetGame();
+        }
+
+
+        private void StartBackgroundMusic()
+        {
+            soundBackground.PlayLooping();
+        }
+
+
+        public void StopBackgroundMusic()
+        {
+            soundBackground.Stop();
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
@@ -271,6 +300,9 @@ namespace Pc_man_Game_MOO_ICT_1
             txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore;
             score = 0;
 
+
+
+
             // Reset movement flags
             goleft = false;
             goright = false;
@@ -320,6 +352,18 @@ namespace Pc_man_Game_MOO_ICT_1
                 }
             }
 
+
+            // Start the background music after a delay
+            Timer backgroundMusicTimer = new Timer();
+            backgroundMusicTimer.Interval = 5000; // Adjust this value based on the length of your beginning sound
+            backgroundMusicTimer.Tick += (s, args) =>
+            {
+                StartBackgroundMusic();
+                backgroundMusicTimer.Stop();
+                backgroundMusicTimer.Dispose();
+            };
+            backgroundMusicTimer.Start();
+
             gameTimer.Start();
         }
 
@@ -337,7 +381,7 @@ namespace Pc_man_Game_MOO_ICT_1
             txtScore.Text = "ຄະແນນ: " + score;
             txtHighestScore.Text = "ຄະແນນສູງສຸດ: " + highestScore + Environment.NewLine + message;
 
-            using (var gameOverDialog = new GameOverDialog())
+            using (var gameOverDialog = new GameOverDialog(this))  // Pass 'this' to the dialog
             {
                 gameOverDialog.Message = message;
                 gameOverDialog.Score = score;
@@ -349,10 +393,9 @@ namespace Pc_man_Game_MOO_ICT_1
                 }
                 else
                 {
-                    this.Close(); // Close the main form if user doesn't want to restart
+                    this.Close();
                 }
             }
-
         }
     }
 }
