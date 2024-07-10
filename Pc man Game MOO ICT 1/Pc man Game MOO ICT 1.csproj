@@ -152,5 +152,8 @@
   <ItemGroup>
     <None Include="Resources\game-manual.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GTA San Andreas Theme.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
