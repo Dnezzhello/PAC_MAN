@@ -100,6 +100,15 @@ namespace Pc_man_Game_MOO_ICT_1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream GTA_San_Andreas_Theme {
+            get {
+                return ResourceManager.GetStream("GTA_San_Andreas_Theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap left {

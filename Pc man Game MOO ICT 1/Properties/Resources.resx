@@ -163,4 +163,7 @@
   <data name="game-manual" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\game-manual.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GTA_San_Andreas_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GTA San Andreas Theme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

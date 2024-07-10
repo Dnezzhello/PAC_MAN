@@ -22,7 +22,7 @@ namespace Pc_man_Game_MOO_ICT_1
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            soundClick.Play();
+            soundClick.PlaySync();
             Welcome welcome = new Welcome();
             this.Hide();
             welcome.ShowDialog();
